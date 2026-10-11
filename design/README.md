@@ -1,11 +1,10 @@
-# Questfire Studios website concept
+# Questspire Studio website reference
 
-![Questfire Studios homepage mockup](questfire-studios-mockup.png)
+![Website design reference](questspire-studio-mockup.png)
 
-This is a visual reference for Cursor, not an implemented website.
+The concept image uses the previous Questfire Studios name. Cursor should use
+**Questspire Studio** for the implemented website and retain **QuestForge** as
+the product name. The illustrated phone screens and logo are concepts.
 
-Design: parchment, dark leather/walnut, brass borders, ember orange accents, readable serif headings and sans-serif body text. Feature QuestForge with a clear public privacy-policy link. Keep artwork separate from live HTML text. On phones, stack the hero and product sections.
-
-Suggested implementation: React + TypeScript, reusable components and CSS variables, deployed to Cloudflare Pages. Pages: Home, QuestForge, About, Privacy (/privacy). Replace conceptual phone screens with real QuestForge screenshots and review copy before publishing. The illustrated logo is a concept, not an existing official mark.
-
-For the full React implementation instructions, see [CURSOR_IMPLEMENTATION.md](CURSOR_IMPLEMENTATION.md).
+Read [CURSOR_IMPLEMENTATION.md](../CURSOR_IMPLEMENTATION.md) for the full
+responsive React implementation instructions.
