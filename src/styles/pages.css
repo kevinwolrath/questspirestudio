@@ -1,0 +1,66 @@
+.page {
+  padding: 2.75rem 0 4.5rem;
+  background:
+    radial-gradient(ellipse at 100% 0%, rgba(188, 138, 67, 0.12), transparent 36%),
+    var(--parchment);
+}
+
+.page h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(2.15rem, 1.3rem + 2.6vw, 3.5rem);
+  max-width: 18ch;
+}
+
+.page h2 {
+  margin: 2rem 0 0.8rem;
+  font-size: clamp(1.45rem, 1.15rem + 1vw, 1.9rem);
+}
+
+.feature-list {
+  display: grid;
+  gap: 1rem;
+  list-style: none;
+  margin: 0 0 0.5rem;
+  padding: 0;
+}
+
+.feature-list li {
+  padding: 1rem 1.1rem;
+  background: rgba(251, 241, 220, 0.55);
+  border: 1px solid rgba(110, 78, 34, 0.18);
+  border-radius: 0.75rem;
+}
+
+.feature-list h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1.25rem;
+}
+
+.feature-list p,
+.page .preview__caption {
+  color: var(--text-muted);
+}
+
+.page .preview__caption {
+  max-width: 62ch;
+}
+
+.policy h1 {
+  max-width: 16ch;
+}
+
+.policy h2 {
+  margin-top: 2rem;
+}
+
+.policy p,
+.policy h1,
+.policy h2 {
+  max-width: 68ch;
+}
+
+@media (min-width: 640px) {
+  .feature-list {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+  }
+}

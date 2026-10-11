@@ -1,0 +1,138 @@
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--walnut);
+  color: var(--text-on-dark);
+  border-bottom: 1px solid rgba(228, 192, 122, 0.4);
+}
+
+.header__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+  min-height: 4.75rem;
+  padding-block: 0.4rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  min-height: 44px;
+  min-width: 0;
+  color: var(--text-on-dark);
+  text-decoration: none;
+}
+
+.brand:hover {
+  color: var(--parchment-light);
+}
+
+.brand__mark {
+  width: 36px;
+  height: 36px;
+  flex: none;
+  color: var(--gold-soft);
+}
+
+.wordmark {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+.nav-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid rgba(228, 192, 122, 0.45);
+  border-radius: var(--radius-control);
+  background: transparent;
+  color: var(--text-on-dark);
+  cursor: pointer;
+}
+
+.site-nav {
+  display: none;
+  flex: 1 0 100%;
+  padding-bottom: 0.5rem;
+}
+
+.site-nav.is-open {
+  display: block;
+}
+
+.site-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.site-nav a {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0.25rem 0.35rem;
+  color: var(--text-on-dark);
+  text-decoration: none;
+  border-radius: var(--radius-control);
+}
+
+.site-nav a:hover {
+  color: var(--parchment-light);
+  text-decoration: underline;
+  text-underline-offset: 0.22em;
+}
+
+.site-nav a[aria-current="page"] {
+  text-decoration: underline;
+  text-decoration-color: var(--gold-soft);
+  text-underline-offset: 0.35em;
+}
+
+@media (max-width: 419px) {
+  .wordmark {
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+  }
+}
+
+@media (min-width: 640px) {
+  .nav-toggle {
+    display: none;
+  }
+
+  .site-nav,
+  .site-nav.is-open {
+    display: block;
+    flex: 1 1 auto;
+    width: auto;
+    padding-bottom: 0;
+  }
+
+  .site-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.15rem;
+  }
+
+  .site-nav a {
+    display: inline-flex;
+    padding-inline: 0.85rem;
+  }
+
+  .wordmark {
+    font-size: 0.92rem;
+    letter-spacing: 0.16em;
+  }
+}

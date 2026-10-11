@@ -1,0 +1,29 @@
+.site-footer {
+  background: var(--walnut);
+  color: var(--text-on-dark);
+  border-top: 1px solid rgba(228, 192, 122, 0.4);
+}
+
+.site-footer__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1.5rem;
+  padding-block: 1.25rem;
+}
+
+.site-footer a {
+  color: var(--text-on-dark);
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.site-footer a:hover {
+  color: var(--parchment-light);
+}
+
+.site-footer__meta {
+  margin: 0;
+}
