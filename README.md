@@ -13,23 +13,21 @@ npm run build    # typecheck and static build into dist/
 npm run preview  # serve the production build
 ```
 
-This project was built and checked with Node.js 24.18.1. Vite 8 requires Node.js `^20.19.0` or `>=22.12.0`. `.node-version` pins **22.22.0** for Cloudflare Pages.
+This project was built and checked with Node.js 24.18.1. Vite 8 requires Node.js `^20.19.0` or `>=22.12.0`. `.node-version` pins **24.18.1** for Cloudflare builds, matching the previously verified runtime and the test dependencies’ engine requirements.
 
-## Cloudflare Pages
+## Cloudflare Workers
 
-Do not deploy until asked. Suggested settings:
+Cloudflare Workers Builds is connected to this repository. Production must use `main`; the design branch contains only the mockup.
 
 - Build command: `npm run build`
-- Build output directory: `dist`
-- Node.js version: 22.22.0 (from `.node-version`)
+- Deploy command: `npx wrangler deploy`
+- Root directory: repository root
+- Node.js version: 24.18.1 (from `.node-version`)
+- Static output: `dist`
 
-`public/_redirects` is copied into the build:
+The committed `wrangler.jsonc` serves `dist` and enables `assets.not_found_handling: "single-page-application"`. Direct visits to `/questforge`, `/about`, and `/privacy` load the app; unknown navigation paths render the in-app not-found page. Do not restore the Pages `/* /index.html 200` rule in `public/_redirects`: Workers rejects it as an infinite loop.
 
-```text
-/* /index.html 200
-```
-
-Cloudflare Pages serves real files, including `/assets/*`, before that fallback. Direct visits to `/questforge`, `/about`, and `/privacy` load the app, and unknown paths render the in-app not-found page. No public hostname is hard-coded. Set the production domain in metadata when it exists. HTTPS comes from Cloudflare.
+The build runs once in the dashboard build step; Wrangler deploys the existing output without auto-configuring Vite. Pushes to `main` trigger a fresh build. No public hostname is hard-coded. Set the production domain in metadata when it exists. HTTPS comes from Cloudflare.
 
 ## Routes
 
@@ -67,7 +65,7 @@ Checked in this workspace:
 - `npm run lint` — passed with no warnings
 - `npm test` — 5 tests passed (menu open/close, Escape, route changes, privacy wording, not-found page, no Questfire name, no Contact or store links)
 - `npm run build` — passed
-- Production preview at `http://127.0.0.1:4173`: `/`, `/questforge`, `/about`, `/privacy`, and `/missing-page` returned `200` HTML; the built JavaScript asset returned `text/javascript`. `dist/_redirects` is present.
+- Production preview at `http://127.0.0.1:4173`: `/`, `/questforge`, `/about`, `/privacy`, and `/missing-page` returned `200` HTML; the built JavaScript asset returned `text/javascript`. This historical preview check predates the Workers configuration; the Pages `_redirects` file has since been removed.
 - Browser, emulated viewports: 1440, 1024×768, 768×1024, 390, and 360. No horizontal overflow. At 1024 and above the hero is two columns and the values are three across. Under 640 the menu button is 44×44, the nav is hidden until opened, and the hero text and actions come before the artwork.
 - Mobile menu: opened, closed with Escape, and focus returned to the button. Choosing Explore QuestForge opened `/questforge`.
 - Our Apps from the About page landed on `/#apps`.
