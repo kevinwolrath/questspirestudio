@@ -73,3 +73,24 @@ Checked in this workspace:
 - 200% root font size at a 1024px-wide viewport: sections stack to one column, the headline stays intact, and the page does not scroll sideways.
 
 Not checked on a physical phone or tablet. Viewport checks used the browser’s device metrics.
+
+## Colourful studio showcase
+
+The homepage uses a midnight/lilac/mint studio theme and an original, lightweight
+SVG wizard's tower. Both products share the data-driven ProductCard and
+ProductArtwork components; product content lives in `src/content/products.ts`.
+Dino Duel has a dedicated `/dino-duel` page. Existing QuestForge, About, privacy,
+and not-found routes remain available. Cloudflare's existing `wrangler.jsonc`
+SPA asset handling is unchanged.
+
+Both supplied product images are installed as optimised WebP files, with 768px
+variants for smaller displays. See `public/images/products/README.md` for asset
+provenance and replacement guidance. Screenshots show the supplied artwork.
+Missing-image title treatments remain available as fallbacks.
+
+To install when the default npm cache is not writable:
+`npm ci --cache /tmp/questspire-npm`. Use the existing isolated checkout; no extra
+Git worktree is needed. Run `npm run dev -- --host 0.0.0.0` for development, or
+`npm run build` followed by `npm run preview -- --host 0.0.0.0` for static checks.
+
+Review screenshots are in `artifacts/desktop.png` and `artifacts/mobile.png`.

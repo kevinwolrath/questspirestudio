@@ -53,7 +53,7 @@ export function Header() {
           <ul>
             <li>
               <Link to="/#apps" onClick={handleNavigate}>
-                Our Apps
+                Our Worlds
               </Link>
             </li>
             <li>

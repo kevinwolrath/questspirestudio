@@ -1,0 +1,79 @@
+.site-header {background:#16192df5;border-color:#ffffff12;backdrop-filter:blur(14px)}
+.brand__mark {width:42px;height:42px;color:#c4b4ef}
+.wordmark {letter-spacing:.055em;text-transform:none;font-size:1.05rem}
+.site-nav a {font-size:.86rem;color:#cac8de}
+.site-nav a:hover {color:#a5ebda}
+.nav-toggle {border-color:#ffffff30}
+.studio-hero {background:#191d34;color:#f5f1ff;overflow:hidden;position:relative}
+.studio-hero__grid {display:grid;grid-template-columns:1.05fr 1fr;align-items:center;min-height:650px;gap:1rem}
+.studio-hero__copy {position:relative;z-index:1;padding:4rem 0}
+.studio-hero .kicker {color:#9ee6d4;font-size:.67rem;letter-spacing:.17em;display:flex;align-items:center;gap:.65rem}
+.spark {font-size:1.2rem}
+.studio-hero h1 {font-size:clamp(2.8rem,4.3vw,4.5rem);line-height:1.17;letter-spacing:-.055em;margin:1.7rem 0}
+.studio-hero h1 em {font-weight:400;color:#bcacf0;white-space:nowrap}
+.studio-hero .lede {font-size:1.05rem;color:#c3c4d5;max-width:43ch;line-height:1.85}
+.hero__actions {margin-top:1.8rem;gap:1rem}
+.studio-hero .button--primary {background:#a2e8d5;color:#152d30;border:1px solid #a2e8d5;box-shadow:0 4px 26px #88edcc12}
+.studio-hero .button--primary:hover {background:#c7faed;transform:translateY(-2px)}
+.studio-hero .button--text {color:#f0ebff;text-decoration:none;font-size:.88rem}
+.button {transition:background .2s,color .2s,transform .2s}
+.hero-footnote {font-size:.72rem;color:#a8a9c1;margin:2.5rem 0 0;display:flex;gap:.6rem;align-items:center}
+.hero-footnote span {font-size:1.4rem;color:#bcacf0}
+.studio-hero__art {position:relative;align-self:stretch;display:flex;align-items:center;justify-content:center;flex-direction:column}
+.spire-art {width:115%;max-width:115%;height:auto;margin-left:-1rem}
+.art-caption {position:absolute;bottom:2rem;font-family:var(--font-serif);font-size:.7rem;font-style:italic;letter-spacing:.03em;color:#b8adce}
+.hero-strip {display:flex;justify-content:center;align-items:center;gap:3rem;padding:1.15rem var(--gutter);border-top:1px solid #ffffff15;background:#15192d;color:#a794d3;font-size:.6rem;letter-spacing:.2em;flex-wrap:wrap}
+.hero-strip span {color:#b4b4ca}
+.games {padding:6rem 0 5rem;scroll-margin-top:6rem;background:#f5f4fa}
+.section-heading {display:flex;align-items:end;justify-content:space-between;gap:2rem;margin-bottom:2.5rem}
+.section-heading h2 {font-size:clamp(2rem,3vw,3rem);letter-spacing:-.04em;margin:.5rem 0 0}
+.section-heading h2 em {font-weight:400;color:#7963ac}
+.section-heading>p {color:#69667b;font-size:.88rem;line-height:1.7;margin:0}
+.games-grid {display:grid;grid-template-columns:1fr 1fr;gap:1.75rem}
+.game-card {min-width:0;background:#fff;border:1px solid #dedbe9;border-radius:14px;overflow:hidden;transition:transform .25s,box-shadow .25s}
+.game-card:hover {transform:translateY(-5px);box-shadow:0 18px 45px #34305d12}
+.game-art {aspect-ratio:3/2;overflow:hidden;background:#252a49;position:relative}
+.game-art img {display:block;width:100%;height:100%;object-fit:contain}
+.game-art__fallback {height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2rem;text-align:center;background:radial-gradient(ellipse at 50% 20%,#6765a8,transparent 65%),linear-gradient(135deg,#182a43,#353054);color:#f7edff;position:relative}
+.game-art__fallback:before,.game-art__fallback:after {content:"";position:absolute;inset:1rem;border:1px solid #ffffff20;border-radius:50% 50% 0 0;pointer-events:none}
+.game-art__fallback:after {inset:1.5rem;border-color:#ffffff0d}
+.game-art--dino-duel .game-art__fallback {background:radial-gradient(ellipse at 65% 10%,#4cbaad,transparent 70%),linear-gradient(125deg,#143f50,#247d71);color:#edffc5}
+.game-art__symbol {font-size:4rem;line-height:1.2;color:#bda9ee}
+.game-art--dino-duel .game-art__symbol {color:#d7f58d}
+.game-art__title {font-family:var(--font-serif);font-weight:700;font-size:clamp(2rem,3.7vw,3.5rem);letter-spacing:-.04em}
+.game-art__motif {font-size:.72rem;margin-top:1rem;max-width:30ch;opacity:.85}
+.game-card__copy {padding:2rem}
+.game-card__eyebrow {display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.game-card__eyebrow .kicker {font-size:.59rem;letter-spacing:.12em;margin:0;color:#71608e}
+.game-number {font-size:.7rem;color:#82798f}
+.game-card h3 {font-size:2rem;letter-spacing:-.04em;margin:.9rem 0}
+.game-card__copy>p {font-size:.93rem;line-height:1.8;color:#666276;max-width:44ch}
+.game-tags {list-style:none;display:flex;gap:.5rem;flex-wrap:wrap;margin:1.3rem 0 1rem;padding:0}
+.game-tags li {font-size:.65rem;padding:.3rem .65rem;border-radius:4px;background:#f0edf8;color:#65527e}
+.game-card--dino-duel .game-tags li {background:#e8f5ef;color:#2e6a55}
+.game-card .button {padding-left:0;color:#4e3b79;font-size:.88rem;text-decoration:none;justify-content:space-between;width:100%;border-top:1px solid #eae6f1;border-radius:0;padding-top:1rem;margin-top:.6rem}
+.game-card--dino-duel .button {color:#286552}
+.values {padding:4rem 0 5rem;background:#eeecf5;border-top:1px solid #e2dfee}
+.values h2 {font-size:clamp(1.6rem,2.7vw,2.5rem);letter-spacing:-.035em;max-width:25ch;margin:0 0 3rem}
+.values__grid {grid-template-columns:repeat(3,1fr);gap:3rem}
+.values__icon {border:0;border-radius:10px;background:#e2dcef;color:#79609e;width:44px;height:44px}
+.values h3 {font-family:var(--font-sans);font-size:1rem;letter-spacing:-.02em}
+.values p {font-size:.85rem;line-height:1.8}
+.values__trees {display:none}
+.site-footer {border-color:#ffffff15}
+.site-footer__inner {font-size:.75rem;padding-block:2rem}
+.site-footer a {color:#c4b9df}
+.game-detail {padding-block:4rem}
+.game-detail h1 {font-size:clamp(3rem,7vw,5rem);letter-spacing:-.05em}
+.game-detail .game-art {max-width:850px;border-radius:16px;margin:2rem 0}
+:focus-visible {outline-color:#7953bf}
+.studio-hero :focus-visible {outline-color:#b2f3df}
+@media(min-width:1024px) and (prefers-reduced-motion:no-preference){.spire-island {animation:levitate 8s ease-in-out infinite} @keyframes levitate {50%{transform:translateY(-8px)}}}
+@media(max-width:1023px){.studio-hero__grid{min-height:570px}.studio-hero h1{font-size:clamp(2rem,4.4vw,3.4rem)}.studio-hero .kicker{font-size:.59rem}.hero-strip{gap:1.5rem}.game-card__copy{padding:1.5rem}.games{padding:4rem 0}.values__grid{gap:1.5rem}.spire-art{width:125%;max-width:125%}.art-caption{bottom:3.5rem}}
+@media(max-width:700px){.studio-hero__grid{grid-template-columns:1fr;gap:0}.studio-hero__copy{padding:3rem 0 0}.studio-hero h1{font-size:clamp(2.25rem,7vw,3.5rem);margin:1.3rem 0}.studio-hero .lede{font-size:1rem}.studio-hero .kicker{font-size:.56rem;letter-spacing:.12em}.hero-footnote{margin-top:1.5rem}.studio-hero__art{height:360px;margin-top:-1rem}.spire-art{height:390px;width:auto;max-width:100%;margin:0}.art-caption{bottom:.5rem}.hero-strip{gap:.8rem 1rem;font-size:.48rem;padding:1rem}.hero-strip span:last-child{display:none}.section-heading{align-items:start;flex-direction:column;gap:1rem}.section-heading>p br{display:none}.games-grid{grid-template-columns:1fr;gap:1.5rem}.games{padding:3.2rem 0}.section-heading h2{font-size:2rem}.game-art__title{font-size:3rem}.game-card__copy{padding:1.5rem}.values{padding:3rem 0}.values__grid{grid-template-columns:1fr;gap:2rem}.values h2{margin-bottom:2rem}.values__grid li{display:grid;grid-template-columns:44px 1fr;gap:0 1rem}.values__icon{grid-row:span 2;margin:0}.values p{max-width:100%}.wordmark{font-size:.9rem;letter-spacing:0}.game-detail{padding-block:2.5rem}}
+.page .game-art {max-width:850px;border-radius:14px;margin-block:2rem}
+.page {min-height:65vh}
+.game-card {display:flex;flex-direction:column}
+.game-card__copy {display:flex;flex:1;flex-direction:column}
+.game-card__copy>.button {margin-top:auto}
+.game-card__copy>.game-tags {margin-bottom:1.6rem}

@@ -23,14 +23,14 @@ describe("Questspire Studio site", () => {
 
   it("links the homepage to QuestForge and the studio", () => {
     renderAt("/");
-    expect(screen.getByRole("heading", { level: 1, name: /Less bookkeeping/ })).toBeTruthy();
+    expect(screen.getByRole("heading", { level: 1, name: /A little magic/ })).toBeTruthy();
     expect(screen.getByRole("link", { name: /Explore QuestForge/ }).getAttribute("href")).toBe(
       "/questforge",
     );
-    expect(screen.getByRole("link", { name: "About the studio" }).getAttribute("href")).toBe(
+    expect(screen.getByRole("link", { name: /Meet the studio/ }).getAttribute("href")).toBe(
       "/about",
     );
-    expect(screen.getByRole("link", { name: "Our Apps" }).getAttribute("href")).toBe("/#apps");
+    expect(screen.getByRole("link", { name: "Our Worlds" }).getAttribute("href")).toBe("/#apps");
   });
 
   it("opens the menu, closes it with Escape, and closes it after a route is chosen", () => {
@@ -59,7 +59,7 @@ describe("Questspire Studio site", () => {
   it("renders QuestForge, privacy wording, and the not-found page", () => {
     const { unmount } = renderAt("/questforge");
     expect(screen.getByRole("heading", { level: 1, name: "QuestForge" })).toBeTruthy();
-    expect(screen.getByText(/Illustrated preview/)).toBeTruthy();
+    expect(screen.getByRole("img", { name: /QuestForge promotional artwork/ })).toBeTruthy();
     expect(screen.getAllByRole("link", { name: "QuestForge Privacy Policy" }).length).toBeGreaterThan(0);
     unmount();
 
@@ -69,6 +69,15 @@ describe("Questspire Studio site", () => {
     expect(screen.getByText("Last updated: 19 September 2026")).toBeTruthy();
     expect(screen.getByText("Questspire Studio does not sell personal information.")).toBeTruthy();
     expect(document.body.textContent ?? "").not.toMatch(/questfire/i);
+  });
+
+  it("provides a Dino Duel route and an artwork fallback", () => {
+    renderAt("/dino-duel");
+    expect(screen.getByRole("heading", { level: 1, name: "Dino Duel" })).toBeTruthy();
+    fireEvent.error(screen.getByRole("img", { name: /Dino Duel promotional artwork/ }));
+    expect(screen.queryByRole("img", { name: /Dino Duel promotional artwork/ })).toBeNull();
+    expect(screen.getByText("Bring your wild side to the table.")).toBeTruthy();
+    expect(screen.getByRole("link", { name: "Back to our worlds" }).getAttribute("href")).toBe("/");
   });
 
   it("shows a not-found page for unknown URLs", () => {

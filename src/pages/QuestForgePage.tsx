@@ -1,7 +1,8 @@
 import { Link } from "react-router";
 import { featureAreas } from "../content/features";
 import { Container } from "../components/Container";
-import { FeatureSheets } from "../components/FeatureSheets";
+import { ProductArtwork } from "../components/ProductFeature";
+import { products } from "../content/products";
 import { PageMeta } from "../components/PageMeta";
 
 export function QuestForgePage() {
@@ -33,7 +34,7 @@ export function QuestForgePage() {
         </ul>
 
         <h2>A look at the app</h2>
-        <FeatureSheets />
+        <ProductArtwork product={products[0]} />
 
         <p className="measure">
           <Link to="/privacy">QuestForge Privacy Policy</Link>

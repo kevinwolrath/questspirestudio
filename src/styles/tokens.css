@@ -32,3 +32,21 @@
     --gutter: 2rem;
   }
 }
+
+/* Questspire: moonlit ink, spell violet, and bright mint. */
+:root {
+  --parchment: #f5f4fa;
+  --parchment-light: #ffffff;
+  --ink: #24233c;
+  --walnut: #16192d;
+  --walnut-light: #25283f;
+  --brass: #9b86dc;
+  --brass-deep: #64518f;
+  --ember: #7560c9;
+  --ember-deep: #654bad;
+  --burgundy: #654bad;
+  --text-on-dark: #f7f5ff;
+  --text-muted: #626176;
+  --gold-soft: #bdb0f5;
+  --radius-control: 8px;
+}

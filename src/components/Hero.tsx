@@ -1,42 +1,20 @@
 import { ArrowIcon } from "./Icons";
 import { Button } from "./Button";
 import { Container } from "./Container";
-import { HeroArt } from "./HeroArt";
+import { SpireArt } from "./SpireArt";
 
 export function Hero() {
-  return (
-    <section className="hero" aria-labelledby="hero-heading">
-      <div className="hero__compass" aria-hidden="true">
-        <svg viewBox="0 0 200 200">
-          <circle cx="100" cy="100" r="78" fill="none" stroke="#6e4e22" strokeWidth="2" />
-          <circle cx="100" cy="100" r="58" fill="none" stroke="#6e4e22" strokeWidth="1" />
-          <path d="M100 18v164M18 100h164M42 42l116 116M158 42 42 158" fill="none" stroke="#6e4e22" strokeWidth="1" />
-          <path d="M100 38 112 100 100 86 88 100Z" fill="#6e4e22" />
-        </svg>
+  return <section className="studio-hero" aria-labelledby="hero-heading">
+    <Container className="studio-hero__grid">
+      <div className="studio-hero__copy">
+        <p className="kicker"><span className="spark">✦</span> Independent minds. Imaginative worlds.</p>
+        <h1 id="hero-heading">A little magic.<br/><em>A new adventure.</em></h1>
+        <p className="lede">From epic tabletop stories to tiny dinosaur duels. We make games and companions that bring your imagination to life.</p>
+        <div className="hero__actions"><a className="button button--primary" href="#apps">Discover our worlds <ArrowIcon/></a><Button to="/about" variant="text">Meet the studio <ArrowIcon/></Button></div>
+        <p className="hero-footnote"><span aria-hidden="true">✧</span> Crafted at Questspire Studio. Made for play.</p>
       </div>
-      <Container className="hero__grid">
-        <div className="hero__copy">
-          <p className="kicker">Tools for your next adventure</p>
-          <h1 id="hero-heading">
-            Less bookkeeping. <span className="hero__accent">More adventure.</span>
-          </h1>
-          <p className="lede">
-            Thoughtful companions for tabletop stories, built for players and Game Masters.
-          </p>
-          <div className="hero__actions">
-            <Button to="/questforge">
-              Explore QuestForge
-              <ArrowIcon />
-            </Button>
-            <Button to="/about" variant="text">
-              About the studio
-            </Button>
-          </div>
-        </div>
-        <div className="hero__frame">
-          <HeroArt />
-        </div>
-      </Container>
-    </section>
-  );
+      <div className="studio-hero__art"><SpireArt/><span className="art-caption">A spark of imagination goes a long way.</span></div>
+    </Container>
+    <div className="hero-strip" aria-hidden="true"><span>SMALL STUDIO</span>✦<span>BIG IMAGINATION</span>✦<span>WORLDS WORTH EXPLORING</span>✦<span>PLAY YOUR WAY</span></div>
+  </section>;
 }
