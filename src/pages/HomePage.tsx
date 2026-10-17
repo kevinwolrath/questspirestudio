@@ -8,7 +8,7 @@ export function HomePage() {
     <>
       <PageMeta
         title="Questspire Studio"
-        description="Thoughtful companions for tabletop stories, built for players and Game Masters."
+        description="Independent games and imaginative companions. Explore QuestForge and Dino Duel from Questspire Studio."
       />
       <Hero />
       <ProductFeature />

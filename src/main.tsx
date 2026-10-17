@@ -27,3 +27,5 @@ createRoot(root).render(
     </BrowserRouter>
   </StrictMode>,
 );
+
+import "./styles/showcase.css";

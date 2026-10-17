@@ -6,19 +6,16 @@ export function AboutPage() {
     <article className="page">
       <PageMeta
         title="About — Questspire Studio"
-        description="Questspire Studio creates companions for tabletop adventures."
+        description="Independent games and imaginative companions from Questspire Studio."
       />
       <Container>
         <p className="kicker">The studio</p>
         <h1>About the studio</h1>
         <p className="lede">
-          Questspire Studio makes companions for tabletop adventures. QuestForge is the studio’s
-          app for keeping characters, campaigns and notes close at hand, so more of the evening can
-          stay with the story.
+          We’re an independent studio with a love of imaginative worlds and the adventures we make together. From tabletop stories to dinosaur card battles, we create games and companions that leave room for your imagination.
         </p>
         <p className="measure">
-          This is an independent studio. The site is a home for the work and for the QuestForge
-          privacy policy.
+          QuestForge keeps your characters, campaigns and notes close at hand. Dino Duel brings a colourful, playful spirit to offline dinosaur card battles. Two different worlds, one sense of adventure.
         </p>
       </Container>
     </article>

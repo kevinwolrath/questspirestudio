@@ -4,18 +4,18 @@ import { Container } from "./Container";
 
 const values: { title: string; text: string; icon: ReactNode }[] = [
   {
-    title: "Made for the table",
-    text: "A companion meant to sit beside the game, for players and Game Masters.",
+    title: "Made for play",
+    text: "Around a table or in a dinosaur duel. There’s always room for another adventure.",
     icon: <TableIcon />,
   },
   {
-    title: "Your stories, organised",
-    text: "Characters, campaigns and notes kept in one place.",
+    title: "Imagination comes first",
+    text: "New worlds, colourful characters, and a little room for the unexpected.",
     icon: <BookIcon />,
   },
   {
     title: "Built with care",
-    text: "An independent studio making companions for tabletop stories.",
+    text: "An independent studio putting thought into the little things.",
     icon: <HeartIcon />,
   },
 ];
@@ -24,9 +24,7 @@ export function Values() {
   return (
     <section className="values" aria-labelledby="values-heading">
       <Container>
-        <h2 id="values-heading" className="visually-hidden">
-          Studio values
-        </h2>
+        <p className="kicker">The spirit of the spire</p><h2 id="values-heading">A little studio with a sense of wonder.</h2>
         <ul className="values__grid">
           {values.map((value) => (
             <li key={value.title}>

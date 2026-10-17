@@ -7,6 +7,8 @@ import { NotFoundPage } from "./pages/NotFoundPage";
 import { PrivacyPage } from "./pages/PrivacyPage";
 import { QuestForgePage } from "./pages/QuestForgePage";
 
+import { DinoDuelPage } from "./pages/DinoDuelPage";
+
 export function App() {
   return (
     <>
@@ -14,6 +16,7 @@ export function App() {
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<HomePage />} />
+          <Route path="/dino-duel" element={<DinoDuelPage />} />
           <Route path="/questforge" element={<QuestForgePage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/privacy" element={<PrivacyPage />} />
